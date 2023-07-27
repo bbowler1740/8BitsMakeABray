@@ -15,19 +15,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/projects', function () {
     return view('projects');
-});
+})->name('projects');
 
 Route::get('/blog-posts', function () {
     return view('blog-posts');
-});
+})->name('blog-posts');
 
 Route::get('/resume', function () {
     return view('resume');
-});
+})->name('resume');
 
 Route::get('/contact', function () {
     return view('contact');
