@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="w-full h-screen">
-                <iframe src="{{asset('content/Brayden Bowler resume.pdf')}}" class="w-full h-full"></iframe>
+                <iframe title="Brayden Bowler's Resume" loading="eager" src="{{asset('content/Brayden Bowler resume.pdf')}}" class="w-full h-full"></iframe>
             </div>
         </div>
     </div>
