@@ -3,11 +3,10 @@
 namespace App\Http\Composers;
 
 use Illuminate\View\View;
-use Illuminate\Support\Facades\Route;
 
 class NavbarComposer
 {
-    public function compose(View $view)
+    public function compose(View $view) : void
     {
         $routes = [
             'Home',
