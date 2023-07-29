@@ -24,7 +24,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-1 gap-6 lg:gap-8">
                     @include('partials/about-me-card')
                 </div>
-                <div class="mt-14">
+                <div class="mt-10">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                         @include('partials/projects-card')
                         @include('partials/blog-posts-card')
