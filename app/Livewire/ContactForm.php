@@ -16,6 +16,6 @@ class ContactForm extends Component
 
     public function save()
     {
-        
+
     }
 }
