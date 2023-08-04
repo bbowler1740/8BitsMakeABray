@@ -15,7 +15,7 @@
                 @error('visitorMessage') <span class="error text-red-600">{{$message}}</span>@enderror
             </div>
 
-            <button type="submit" class="justify-center row-start-4 row-end-5 border dark:border dark:border-white">Submit Inquiry</button>
+            <button type="submit" class="justify-center row-start-4 row-end-5 border motion-safe:hover:scale-[1.10]">Submit Inquiry</button>
         </form>
     </div>
 </div>
