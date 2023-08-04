@@ -7,9 +7,9 @@ use Livewire\Component;
 
 class ContactForm extends Component
 {
-    #[Rule('required|email', message: 'Please provide a valid e-mail address.', onUpdate: false)]
+    #[Rule('required|email', message: 'Please provide a valid e-mail address', onUpdate: false)]
     public $visitorEmail = '';
-    #[Rule('required', message: 'Please provide an inquiry message.', onUpdate: false)]
+    #[Rule('required', message: 'Please provide a message.', onUpdate: false)]
     public $visitorMessage = '';
 
     public function render()
