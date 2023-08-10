@@ -2,7 +2,13 @@
     <div class="text-gray-900 dark:text-white">
         <h2 class="text-xl font-semibold">Business Inquiry? E-Mail Me! </h2>
 
-        <form class="space-y-4 text-gray-500 dark:text-gray-400 text-sm" wire:submit="save">
+        <form class="space-y-4 text-gray-500 dark:text-gray-400 text-sm" wire:submit="submit">
+            <div class="mt-4">
+                <label for="name">Name:</label>
+                <input type="text" id="name" class="w-full border rounded text-black dark:text-black placeholder-grey-300" placeholder="Enter your preferred name." wire:model="visitorName">
+                @error('visitorName') <span class="error text-red-500">{{$message}}</span>@enderror
+            </div>
+
             <div class="mt-4">
                 <label for="email">Email:</label>
                 <input type="text" id="email" class="w-full border rounded text-black dark:text-black placeholder-grey-300" placeholder="Enter your E-Mail address." wire:model="visitorEmail">
