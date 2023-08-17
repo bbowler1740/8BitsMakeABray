@@ -24,8 +24,7 @@ class ContactForm extends Component
     public function submit():void
     {
         if($this->validate()) {
-            Mail::mailer('mailgun')
-                ->to('braybowler1995@gmail.com')
+            Mail::to('braybowler1995@gmail.com')
                 ->send(new InquirySent($this->visitorName, $this->visitorEmail, $this->visitorMessage));
             $this->resetForm();
         }
