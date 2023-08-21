@@ -21,7 +21,7 @@ class ContactForm extends Component
         return view('livewire.contact-form');
     }
 
-    public function submit():void
+    public function save()
     {
         if($this->validate()) {
             Mail::to('braybowler1995@gmail.com')
@@ -30,10 +30,8 @@ class ContactForm extends Component
         }
     }
 
-    public function resetForm():void
+    public function resetForm()
     {
-        $this->visitorName = '';
-        $this->visitorEmail = '';
-        $this->visitorMessage = '';
+        $this->reset('visitorName', 'visitorEmail', 'visitorMessage');
     }
 }

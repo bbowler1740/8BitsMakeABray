@@ -2,22 +2,22 @@
     <div class="text-gray-900 dark:text-white">
         <h2 class="text-xl font-semibold">Business Inquiry? E-Mail Me! </h2>
 
-        <form class="space-y-4 text-gray-500 dark:text-gray-400 text-sm" wire:submit="submit">
+        <form class="space-y-4 text-gray-500 dark:text-gray-400 text-sm" wire:submit="save">
             <div class="mt-4">
                 <label for="name">Name:</label>
-                <input type="text" id="name" class="w-full border rounded text-black dark:text-black placeholder-grey-300" placeholder="Enter your preferred name." wire:model="visitorName">
+                <input type="text" wire:model="visitorName" id="name" class="w-full border rounded text-black dark:text-black placeholder-grey-300" placeholder="Enter your preferred name.">
                 @error('visitorName') <span class="error text-red-500">{{$message}}</span>@enderror
             </div>
 
             <div class="mt-4">
                 <label for="email">Email:</label>
-                <input type="text" id="email" class="w-full border rounded text-black dark:text-black placeholder-grey-300" placeholder="Enter your E-Mail address." wire:model="visitorEmail">
+                <input type="text" wire:model="visitorEmail" id="email" class="w-full border rounded text-black dark:text-black placeholder-grey-300" placeholder="Enter your E-Mail address.">
                 @error('visitorEmail') <span class="error text-red-500">{{$message}}</span>@enderror
             </div>
 
             <div>
                 <label for="message">Message:</label>
-                <textarea type="text" id="message" rows="10" class="w-full border rounded text-black dark:text-black placeholder-grey-300" placeholder="Enter your message." wire:model="visitorMessage"></textarea>
+                <textarea type="text" wire:model="visitorMessage" id="message" rows="10" class="w-full border rounded text-black dark:text-black placeholder-grey-300" placeholder="Enter your message."></textarea>
                 @error('visitorMessage') <span class="error text-red-500">{{$message}}</span>@enderror
             </div>
 

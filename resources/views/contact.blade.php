@@ -7,11 +7,11 @@
             <div class="mb-10">
                 @include('partials/nav-bar')
             </div>
-                <div class="mb-10">
-                    @include('partials/contact-information')
-                </div>
-            <div>
+            <div class="mb-10">
                 <livewire:contact-form></livewire:contact-form>
+            </div>
+            <div class="mb-10">
+                @include('partials/contact-information')
             </div>
         </div>
     </div>

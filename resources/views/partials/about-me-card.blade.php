@@ -20,7 +20,7 @@
                 <li>Rock climbing & Hiking {{"\u{1F9D7}"}}</li>
                 <li>Fitness {{"\u{1F3CB}"}}</li>
                 <li>Reading {{"\u{1F4D6}"}}</li>
-                <li>Board Games {{"\u{265F}"}}</li>
+                <li>Board Games {{"\u{2654}"}}</li>
             </ul>
         </div>
     </div>
