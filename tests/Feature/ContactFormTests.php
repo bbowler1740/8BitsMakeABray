@@ -49,8 +49,18 @@ test('form resets on save', function() {
         ->set('visitorName', 'Brayden Bowler')
         ->set('visitorEmail', 'braybowler1995@gmail.com')
         ->set('visitorMessage', 'Test message.')
+        ->assertSee('Brayden Bowler')
         ->call('save')
-        ->assertViewHas('visitorName', '')
-        ->assertViewHas('visitorEmail', '')
-        ->assertViewHas('visitorMessage', '');
+        ->assertSet('visitorName', '')
+        ->assertSet('visitorEmail', '')
+        ->assertSet('visitorMessage', '')
+        ->assertDontSee('Brayden Bowler');
+});
+
+test('form generates mailable on save', function() {
+    Livewire::test(ContactForm::class)
+        ->set('visitorName', 'Brayden Bowler')
+        ->set('visitorEmail', 'braybowler1995@gmail.com')
+        ->set('visitorMessage', 'Test message.')
+        ->call('save');
 });

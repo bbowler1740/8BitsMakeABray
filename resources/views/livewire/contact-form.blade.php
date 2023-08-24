@@ -5,23 +5,23 @@
         <form class="space-y-4 text-gray-500 dark:text-gray-400 text-sm" wire:submit="save">
             <div class="mt-4">
                 <label for="name">Name:</label>
-                <input type="text" wire:model="visitorName" id="name" class="w-full border rounded text-black dark:text-black placeholder-grey-300" placeholder="Enter your preferred name.">
+                <input type="text" wire:model.live="visitorName" id="name" class="w-full border rounded text-black dark:text-black placeholder-grey-300" placeholder="Enter your preferred name.">
                 @error('visitorName') <span class="error text-red-500">{{$message}}</span>@enderror
             </div>
-
+            <p class="text-white">{{$visitorName}}</p>
             <div class="mt-4">
                 <label for="email">Email:</label>
-                <input type="text" wire:model="visitorEmail" id="email" class="w-full border rounded text-black dark:text-black placeholder-grey-300" placeholder="Enter your E-Mail address.">
+                <input type="text" wire:model.live="visitorEmail" id="email" class="w-full border rounded text-black dark:text-black placeholder-grey-300" placeholder="Enter your E-Mail address.">
                 @error('visitorEmail') <span class="error text-red-500">{{$message}}</span>@enderror
             </div>
 
             <div>
                 <label for="message">Message:</label>
-                <textarea type="text" wire:model="visitorMessage" id="message" rows="10" class="w-full border rounded text-black dark:text-black placeholder-grey-300" placeholder="Enter your message."></textarea>
+                <textarea type="text" wire:model.live="visitorMessage" id="message" rows="10" class="w-full border rounded text-black dark:text-black placeholder-grey-300" placeholder="Enter your message."></textarea>
                 @error('visitorMessage') <span class="error text-red-500">{{$message}}</span>@enderror
             </div>
 
-            <button type="submit" class="p-2 border border-gray-500 dark:border-gray-400 motion-safe:hover:scale-[1.05]">Submit Inquiry</button>
+            <button type="submit" class="p-2 rounded border border-gray-500 dark:border-gray-400 motion-safe:hover:scale-[1.05]">Submit Inquiry</button>
         </form>
     </div>
 </div>
