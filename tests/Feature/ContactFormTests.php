@@ -58,9 +58,20 @@ test('form resets on save', function() {
 });
 
 test('form generates mailable on save', function() {
+
+    $visitorName = 'Brayden Bowler';
+    $visitorEmail = 'braybowler1995@gmail.com';
+    $visitorMessage = 'Test message.';
+
     Livewire::test(ContactForm::class)
-        ->set('visitorName', 'Brayden Bowler')
-        ->set('visitorEmail', 'braybowler1995@gmail.com')
-        ->set('visitorMessage', 'Test message.')
+        ->set('visitorName', $visitorName)
+        ->set('visitorEmail', $visitorEmail)
+        ->set('visitorMessage', $visitorMessage)
         ->call('save');
+
+    $mailable = new \App\Mail\InquirySent(visitorName: $visitorName, visitorEmail: $visitorEmail, visitorMessage: $visitorMessage);
+
+    $mailable->assertFrom($visitorEmail);
+    $mailable->assertTo($visitorEmail);
+    $mailable->assertHasSubject('Inquiry Sent');
 });

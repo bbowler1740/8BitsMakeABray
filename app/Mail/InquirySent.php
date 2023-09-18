@@ -27,6 +27,7 @@ class InquirySent extends Mailable implements ShouldQueue
     {
         return new Envelope(
             from: new Address($this->visitorEmail, $this->visitorName),
+            to: ['braybowler1995@gmail.com'],
             subject: 'Inquiry Sent',
         );
     }

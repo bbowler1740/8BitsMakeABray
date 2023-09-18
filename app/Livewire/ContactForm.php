@@ -4,7 +4,6 @@ namespace App\Livewire;
 
 use App\Mail\InquirySent;
 use Illuminate\Support\Facades\Mail;
-use Livewire\Attributes\Modelable;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
 
