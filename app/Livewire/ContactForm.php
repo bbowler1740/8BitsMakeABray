@@ -25,8 +25,8 @@ class ContactForm extends Component
     public function save()
     {
         if($this->validate()) {
-            $this->generateMailable();
-            $this->resetForm();
+            self::generateMailable();
+            self::resetForm();
         }
     }
 

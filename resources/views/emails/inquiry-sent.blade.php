@@ -1,7 +1,7 @@
 <div>
-    Hi Brayden.
+    Hi Brayden.<br>
 
-    {{$visitorName}}, ({{$visitorEmail}}), has sent the following inquiry:
+    <br>{{$visitorName}}, ({{$visitorEmail}}), has sent the following inquiry:<br>
 
-    {{$visitorMessage}}
+    <br>{{$visitorMessage}}
 </div>
