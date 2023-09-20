@@ -9,7 +9,6 @@ use Livewire\Component;
 
 class ContactForm extends Component
 {
-
     #[Rule('required', message: 'Please provide your preferred name.', onUpdate: false)]
     public string $visitorName = '';
     #[Rule('required|email', message: 'Please provide a valid e-mail address.', onUpdate: false)]
@@ -22,7 +21,7 @@ class ContactForm extends Component
         return view('livewire.contact-form');
     }
 
-    public function save()
+    public function save() : void
     {
         if($this->validate()) {
             self::generateMailable();
@@ -39,6 +38,7 @@ class ContactForm extends Component
     public function resetForm() : void
     {
         $this->reset('visitorName', 'visitorEmail', 'visitorMessage');
-        $this->visitorName = '';
+        //TODO: There may be a way to refresh the contact form without redirection. To investigate.
+        $this->redirect(route('Contact'));
     }
 }

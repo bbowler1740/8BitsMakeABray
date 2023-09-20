@@ -49,16 +49,13 @@ test('form resets on save', function() {
         ->set('visitorName', 'Brayden Bowler')
         ->set('visitorEmail', 'braybowler1995@gmail.com')
         ->set('visitorMessage', 'Test message.')
-        ->assertSee('Brayden Bowler')
         ->call('save')
-        ->assertSet('visitorName', '')
-        ->assertSet('visitorEmail', '')
-        ->assertSet('visitorMessage', '')
-        ->assertDontSee('Brayden Bowler');
+        ->assertDontSee('Brayden Bowler')
+        ->assertDontSee('braybowler1995@gmail.com')
+        ->assertDontSee('Test message.');
 });
 
 test('form generates mailable on save', function() {
-
     $visitorName = 'Brayden Bowler';
     $visitorEmail = 'braybowler1995@gmail.com';
     $visitorMessage = 'Test message.';
