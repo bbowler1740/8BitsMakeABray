@@ -4,15 +4,15 @@
     <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Social Media</h2>
     <div class="text-gray-500 dark:text-gray-400 text-sm">
         <a href="https://www.twitter.com/8BitsMakeABray" target="_blank">
-            <img class="w-16 h-16 motion-safe:hover:scale-[1.500]"
+            <img class="w-16 h-16 motion-safe:hover:scale-[1.10]"
                  src="{{asset('images/x-social-media-logo-icon.png')}}" alt="X Logo">
         </a>
         <a href="https://www.linkedin.com/in/brayden-bowler/" target="_blank">
-            <img class="w-16 h-16 motion-safe:hover:scale-[1.500]"
+            <img class="w-16 h-16 motion-safe:hover:scale-[1.10]"
                  src="{{asset('images/linkedin.png')}}" alt="LinkedIn Logo">
         </a>
         <a href="https://www.github.com/bbowler1740" target="_blank">
-            <img class="w-16 h-16" src="{{asset('images/github-logo.png')}}" alt="GitHub Logo">
+            <img class="w-16 h-16 motion-safe:hover:scale-[1.10]" src="{{asset('images/github-logo.png')}}" alt="GitHub Logo">
         </a>
     </div>
 </div>
